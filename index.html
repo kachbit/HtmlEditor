@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body onload="hide()" style="background-color:black; color:white;">
+
+<h2>Html editor</h2>
+
+
+<textarea id="Textarea" rows="20" cols="70"></textarea>
+<br>
+<button onclick="generate();">generate</button>
+<a id="output">Run</a>
+<script>
+function hide() {
+
+document.getElementById("output").style.display = "none"
+
+}
+function generate() {
+	document.getElementById("output").style.display = "block";
+	document.getElementById("Textarea").value;
+    var url = document.getElementById("Textarea").value;
+    url = url.replace(/\n/g, "");
+    
+	document.getElementById("output").href = "data:text/html," + url;
+}
+</script>
+
+</body>
+</html> 
